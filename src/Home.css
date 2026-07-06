@@ -1,0 +1,122 @@
+.home-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('./Images/HomeImage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 2rem;
+}
+
+.home-content {
+  max-width: 750px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(0.1px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.home-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fef3c7;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.home-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
+.home-para {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+  
+}
+
+.contactbutton,
+.contactbutto {
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.contactbutton {
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.contactbutto {
+  color: #0f172a;
+  background: #fbbf24;
+}
+
+.contactbutton:hover,
+.contactbutto:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+}
+
+.home-highlights {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  color: #f8fafc;
+}
+
+.home-highlights span {
+  background: rgba(255, 255, 255, 0.14);
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    min-height: 80vh;
+    padding: 1rem;
+  }
+
+  .home-content {
+    padding: 1.5rem;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+  }
+
+  .contactbutton,
+  .contactbutto {
+    width: 50%;
+  }
+}
