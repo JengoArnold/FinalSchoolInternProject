@@ -7,7 +7,11 @@ function Header() {
     <header className="header">
       <div className="header-container">
         <div className="header-logo">
-          <div className="logo-badge">J</div>
+
+
+          <div className="logo-badge">
+            <img src=" badge.jpg" alt="Logo" className="logo-badge" />
+          </div>
           <span className="logo">Jerry International School</span>
         </div>
 

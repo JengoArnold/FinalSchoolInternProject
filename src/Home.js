@@ -30,7 +30,7 @@ function Home() {
     <div>
 <div className="about-us">
       <h1 className="about-us-title">AboutUs</h1>
-      <p>Welcome to Jerry International School</p>
+      <p >Welcome to Jerry International School</p>
 
       <div className="AboutWe-container">
 <div className=" about-text  ">
@@ -43,9 +43,26 @@ function Home() {
 
       </div>
     </div>
-  
-      
     </div>
+     <div className="about-us-title">
+    Why Choose Jerry International School?<br></br>
+  </div>
+<div className="AboutWe-container">
+ 
+<div className="AboutWe-image">
+ <img src="/Reading.jpg" alt="About Us" className="AboutWeimage" />
+  </div>
+
+  <div className=" about-text  ">
+At Jerry International School, we offer a Cambridge curriculum paired with exceptional facilities. Our well-equipped science lab, practical computing, and music class provide dynamic learning environments.<br></br> <br></br> Students enjoy a spacious library filled with a wide selection of books, while our child-friendly swimming pool, under expert coaching, ensures both fun and skill development.<br></br>
+<br></br>
+Our goal is to provide a balanced education that nurtures both academic excellence and personal growth in a safe, supportive environment.  
+  </div>
+  
+</div>
+
+
+
      </div>
 
 

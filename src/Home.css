@@ -39,6 +39,7 @@
   font-size: clamp(2rem, 4vw, 3.2rem);
   margin: 0 0 1rem;
   line-height: 1.2;
+  color: #fbfbfc    ;
 }
 
 .home-para {

@@ -53,6 +53,10 @@ function AboutUs() {
           <p>Years of Excellence</p>
         </div>
       </div>
+      <div>
+        <h1 className="about-us-title">Our Mission</h1>
+        <p className="about-subtitle">To provide a nurturing and stimulating environment that empowers students to achieve their full potential and become responsible global citizens.</p>
+      </div>
     </div>
   )
 }
