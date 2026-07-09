@@ -18,8 +18,16 @@ function SignUp() {
             <input type="password" id="password" placeholder="Enter your password" className="form-control" />
              <label className="fom-control" htmlFor="confirm-password">Confirm Password</label>
             <input type="password" id="confirm-password" placeholder="Confirm your password" className="form-control" />
-
+  <div className="signupformoptions">
+                 <label className='signupterms'>
+                    <input type="checkbox" required />
+                     i Agree to the terms of service and Privacy policy
+                 </label>
+              </div>
             <button className="btn btn-primary form-control" type="submit">Sign Up</button>
+            <p className='signupswitch'>
+             Already have account? <a href='/login'>Login</a>
+          </p>
           </form>
         </div>
       </div>

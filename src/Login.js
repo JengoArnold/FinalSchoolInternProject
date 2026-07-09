@@ -15,8 +15,13 @@ function Login() {
 
             <label className="fom-control" htmlFor="password">Password</label>
             <input type="password" id="password" placeholder="Enter your password" className="form-control" />
+           
 
             <button className="btn btn-primary form-control" type="submit">Login</button>
+
+             <p className='signupswitch'>
+             Don't have an account? <a href='/signup'>Sign Up</a>
+          </p>
           </form>
         </div>
       </div>

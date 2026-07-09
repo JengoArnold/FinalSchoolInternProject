@@ -1,0 +1,12 @@
+.signupterms{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: #212529;
+}
+.signupswitch a{
+    color:#74c0fc ;
+    font-weight: 600;
+    text-decoration: none;
+}
