@@ -17,6 +17,7 @@ function Home() {
         <div className="home-buttons">
           <Link to="/contact" className="contactbutton">Contact Us</Link>
           <Link to="/about" className="contactbutto">Learn More</Link>
+          <a href="/SchoolForm.pdf"  className="contactbutton"  target="_blank" rel="noopener noreferrer">Register</a>
         </div>
 
         <div className="home-highlights">

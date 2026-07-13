@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
 
+
 function Header() {
   return (
     <header className="header">
@@ -26,7 +27,8 @@ function Header() {
 
           <div className="header-buttons">
             <Link to="/login" className="btn btn-login">Login</Link>
-            <Link to="/signup" className="btn btn-signup">Sign Up</Link>
+            <Link to="/signup"   className="contactbutto">Sign Up</Link>
+
           </div>
         </nav>
       </div>
