@@ -1,25 +1,85 @@
 import React,{useState} from 'react'
 import './ContactUs.css'
+import emailjs from '@emailjs/browser';
+
+import {
+  db,
+  collection,
+  addDoc,
+  serverTimestamp
+} from "./Firebase";
 
 function ContactUs() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+  
+const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
   });
+
+const [loading, setLoading] = useState(false);
+
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
-    setFormData(prevState => ({
+
+    setFormData((prevState) => ({
       ...prevState,
       [id]: value
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  if (!formData.name || !formData.email || !formData.message) {
+    alert("Please fill in all fields.");
+    return;
   }
+
+setLoading(true);
+
+  try {
+    // Save message to Firestore
+    await addDoc(collection(db, "messages"), {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+      createdAt: serverTimestamp()
+    });
+
+    // Send email using EmailJS
+    await emailjs.send(
+      "service_uwbjwal",
+      "template_ob8csyf",
+      {
+        name: formData.name,
+        email: formData.email,
+        subject: "New Contact Form Submission",
+        message: formData.message,
+      },
+      "wgkGVYzEo0VNGdU-p"
+    );
+
+    alert("Message sent successfully!");
+
+    setLoading(false);
+
+    setFormData({
+      name: "",
+      email: "",
+      message: ""
+    });
+
+  } catch (error) {
+    console.error(error);
+    setLoading(false);
+    alert("Error sending message.");
+  }
+};
+  
+ 
   return (
     <div className="contact-us">
       <div className="contact-details">
@@ -43,11 +103,16 @@ function ContactUs() {
           <input type="email" id="email" value={formData.email} onChange={handleInputChange} placeholder="Your email" className="form-control" />
           <label htmlFor="message">Message</label>
           <textarea id="message" value={formData.message} onChange={handleInputChange} placeholder="Tell us how we can help..." className="form-control"></textarea>
-          <button className="btn btn-primary" type="submit">Send Message</button>
+         <button className="btn btn-primary" type="submit" disabled={loading}>{loading ? "Sending..." : "Send Message"}
+</button>
+         
+        
+
+          
         </form>
       </div>
     </div>
   )
-}
+ }
 
-export default ContactUs
+export default ContactUs;
