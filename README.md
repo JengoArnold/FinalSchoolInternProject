@@ -8,7 +8,6 @@ A modern school website built using React.js and Firebase.
 - Firebase Authentication
 - Contact form
 - EmailJS integration
-- Admin dashboard
 - Firestore database
 - Responsive design
 
