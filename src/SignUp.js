@@ -1,8 +1,7 @@
 import React ,{useState} from 'react'
 import {
   auth,
-  createUserWithEmailAndPassword,
-  updateProfile
+  createUserWithEmailAndPassword
 } from "./Firebase";
 function SignUp() {
   
