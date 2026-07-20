@@ -9,7 +9,6 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 
 import Services from "./Services";
-import Firebase from "./Firebase";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {

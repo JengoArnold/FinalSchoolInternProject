@@ -1,6 +1,5 @@
 import React from 'react'
 import './Footer.css'
-import schoolLogo from './Images/HomeImage.jpg'
 
 function Footer() {
   return (
